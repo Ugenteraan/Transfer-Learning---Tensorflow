@@ -1,3 +1,6 @@
 **/__pycache__/*
 **/*.ckpt
 **/*.jpg
+**/datasets/*
+**/ckpt_folder/*
+**/saved_ckpt/*

@@ -1,6 +1,6 @@
 import os
 import utils
-import model 
+import model_transfer as model 
 import settings
 import numpy as np 
 import tensorflow as tf 
@@ -20,7 +20,7 @@ model_vgg = model.Model()
 #run the tensorflow session
 sess.run(tf.global_variables_initializer())
 #initialize the tensorflow saver module
-saver = tf.train.Saver(model_vgg.wb_variables)
+saver = tf.train.Saver(model_vgg.weights_to_load)
 
 #exception handling in loading the model
 try:

@@ -82,23 +82,23 @@ class Model:
 			'w16' : self.weight_variable_fc(num_of_hidden_layer2, settings.num_of_classes, 'w16'),
 
 			#b1-b13 : convolutional layer's bias
-			'b1'  : self.bias_variable_convolution(patch_depth1, 'b1'),
+			'b1'   : self.bias_variable_convolution(patch_depth1, 'b1'),
 
-			'b2'  : self.bias_variable_convolution(patch_depth1, 'b2'),
+			'b2'   : self.bias_variable_convolution(patch_depth1, 'b2'),
 
-			'b3'  : self.bias_variable_convolution(patch_depth2, 'b3'),
+			'b3'   : self.bias_variable_convolution(patch_depth2, 'b3'),
 
-			'b4'  : self.bias_variable_convolution(patch_depth2, 'b4'),
+			'b4'   : self.bias_variable_convolution(patch_depth2, 'b4'),
 
-			'b5'  : self.bias_variable_convolution(patch_depth3, 'b5'),
+			'b5'   : self.bias_variable_convolution(patch_depth3, 'b5'),
 
-			'b6'  : self.bias_variable_convolution(patch_depth3, 'b6'),
+			'b6'   : self.bias_variable_convolution(patch_depth3, 'b6'),
 
-			'b7'  : self.bias_variable_convolution(patch_depth3, 'b7'),
+			'b7'   : self.bias_variable_convolution(patch_depth3, 'b7'),
 
-			'b8'  : self.bias_variable_convolution(patch_depth4, 'b8'),
+			'b8'   : self.bias_variable_convolution(patch_depth4, 'b8'),
 
-			'b9'  : self.bias_variable_convolution(patch_depth4, 'b9'),
+			'b9'   : self.bias_variable_convolution(patch_depth4, 'b9'),
 
 			'b10'  : self.bias_variable_convolution(patch_depth4, 'b10'),
 
@@ -249,4 +249,3 @@ class Model:
 		tf.add_to_collection('x', self.x)
 		tf.add_to_collection('keep_prob', self.keep_prob)
 		tf.add_to_collection('y_', self.y_)
-		tf.add_to_collection('variables', self.wb_variables)
