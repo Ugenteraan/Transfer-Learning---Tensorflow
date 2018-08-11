@@ -186,13 +186,10 @@ class Model:
 			regularization_value = 0.01 * tf.nn.l2_loss(self.variables['w14']) + 0.01 * tf.nn.l2_loss(self.variables['w15']) + 0.01 * tf.nn.l2_loss(self.variables['w16'])
 
 			self.cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=self.y_, logits=self.logits) + regularization_value)
-			# tf.summary.scalar('Cost', self.cost)
+			
 
 			self.train_step = tf.train.AdamOptimizer(learning_rate= settings.learning_rate).minimize(self.cost)
-			# self.values, self.indices = tf.nn.top_k(self.y, settings.num_of_classes)
-			# table = tf.contrib.lookup.index_to_string_table_from_tensor(
-					# tf.constant([str(i) for i in range(settings.num_of_classes)]))
-			# self.prediction_classes = table.lookup(tf.to_int64(self.indices))
+		
 
 		with tf.name_scope("Accuracy"):
 
@@ -201,10 +198,8 @@ class Model:
 			with tf.name_scope("Accuracy-2"):
 
 				self.accuracy = tf.reduce_mean(tf.cast(correct_prediction, 'float'))
-				# tf.summary.scalar("Accuracy", self.accuracy)
 				
-		# self.merged_summary = tf.summary.merge_all()
-
+		#add these to collections so that it can be accessed from the meta graph later.
 		tf.add_to_collection("logits", self.logits)
 		tf.add_to_collection("x", self.x)
 		tf.add_to_collection("y", self.y)

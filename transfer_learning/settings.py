@@ -19,9 +19,21 @@ transfer_learning_mode_array = ['first', 'second', 'third']
 transfer_learning_mode = transfer_learning_mode_array[1]
 
 #when mode #2 is picked, you must provide how many cnn layers' weights you want to freeze (starts from 1 and ends with 16)
+
 no_of_layers_to_freeze_start = 1
 no_of_layers_to_freeze_end = 10
 
+#if the transfer learning mode is first
+#freeze all the conv layers
+if transfer_learning_mode == 'first':
+	no_of_layers_to_freeze_start = 1
+	no_of_layers_to_freeze_end = 13
+
+if transfer_learning_mode == 'third':
+	no_of_layers_to_freeze_start = 0
+	no_of_layers_to_freeze_end = 0
+
+#errorneous values for the second mode
 if transfer_learning_mode == 'second' :
 	#vgg-16 only has 13 conv layers (including fc we have 16 layers)
 	if no_of_layers_to_freeze_start == None or no_of_layers_to_freeze_end > 16:
@@ -32,21 +44,21 @@ if transfer_learning_mode == 'second' :
 
 
 
-
+#this list keeps track of which weight can be trained and which cant be trained
 trainables = []
 
 for k in range(no_of_layers_to_freeze_start-1, no_of_layers_to_freeze_end):
-
+	#freeze these layers
 	trainables.append(False)
 
 list_len = len(trainables)
 
 for j in range(list_len-1, 16):
-
+	#rest of the layers are trainable
 	trainables.append(True)
 
 
-
+print(trainables)
 
 #get the length to extract the name of the folder (i.e. styles) later on
 dataset_path_length = len(dataset_path)
@@ -74,7 +86,7 @@ accuracy_batch_size = 30
 learning_rate = 0.000001
 
 #names of the folder to save and load models
-save_folder_name = 'ckpt_folder'
+save_folder_name = 'transferred_ckpt'
 load_folder_name = 'saved_ckpt'
 
 #in list format in case there are other image extensions in the future
