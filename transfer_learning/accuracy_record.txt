@@ -1,3 +1,9 @@
-The highest accuracy is : 0.14166666939854622 
-The highest accuracy is : 0.10000000335276127 
-The highest accuracy is : 0.10000000335276127 
+The highest accuracy is : 0.2575757671147585 
+The highest accuracy is : 0.2575757671147585 
+The highest accuracy is : 0.2575757671147585 
+The highest accuracy is : 0.25757576897740364 
+The highest accuracy is : 0.2598484940826893 
+The highest accuracy is : 0.2598484940826893 
+The highest accuracy is : 0.26818182691931725 
+The highest accuracy is : 0.2765151597559452 
+The highest accuracy is : 0.2765151597559452 

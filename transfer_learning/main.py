@@ -21,6 +21,7 @@ model_vgg = model.Model()
 sess.run(tf.global_variables_initializer())
 #initialize the tensorflow saver module
 saver = tf.train.Saver(model_vgg.weights_to_load)
+full_saver = tf.train.Saver()
 
 #exception handling in loading the model
 try:
@@ -156,7 +157,7 @@ for epoch in range(settings.epoch):
 	#save the model if it produces a higher or equal testing accuracy than the previous epochs
 	if epoch_test_acc/settings.memory_limit >= highest_accuracy:
 		#save the model at the desired location
-		saver.save(sess, save_path)
+		full_saver.save(sess, save_path)
 		#assign the new accuracy to the highest_accuracy variable
 		highest_accuracy = epoch_test_acc/settings.memory_limit
 		#write the highest accuracy in accuracy_record.txt

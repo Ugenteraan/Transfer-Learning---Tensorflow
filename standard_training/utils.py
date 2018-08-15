@@ -51,6 +51,6 @@ def get_files(number_of_round):
 
 
 	#split the data into training set and test set and randomize them (order of corresponding allX and allY is preserved)
-	X, X_test, Y, Y_test = train_test_split(allX, allY, test_size = 0.2, random_state=42)
+	X, X_test, Y, Y_test = train_test_split(allX, allY, test_size = 0.1, random_state=42)
 	allX, allY = None, None
 	return(X,X_test,Y,Y_test)

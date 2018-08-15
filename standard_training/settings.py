@@ -9,7 +9,7 @@ number_of_files = 0
 current_directory = os.getcwd()
 
 #path where the datasets are stored
-dataset_path = current_directory + '/datasets/'
+dataset_path = current_directory + '/validation_set/'
 
 #get the length to extract the name of the folder (i.e. styles) later on
 dataset_path_length = len(dataset_path)
@@ -24,17 +24,17 @@ image_depth = 3 if grayscale is False else 1
 picture_input_dimension = 224
 
 #training iteration
-epoch = 70
+epoch = 1000
 
 #this is to break the datasets in 'n' sizes 
-memory_limit = 1
+memory_limit = 2
 
 #stochastic gradient descent
 batch_size = 30
 accuracy_batch_size = 30
 
 #learning rate of the model
-learning_rate = 0.000001
+learning_rate = 1e-7
 
 #names of the folder to save and load models
 save_folder_name = 'ckpt_folder'

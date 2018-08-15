@@ -249,3 +249,4 @@ class Model:
 		tf.add_to_collection('x', self.x)
 		tf.add_to_collection('keep_prob', self.keep_prob)
 		tf.add_to_collection('y_', self.y_)
+		tf.add_to_collection('accuracy', self.accuracy)

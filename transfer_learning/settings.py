@@ -21,7 +21,7 @@ transfer_learning_mode = transfer_learning_mode_array[1]
 #when mode #2 is picked, you must provide how many cnn layers' weights you want to freeze (starts from 1 and ends with 16)
 
 no_of_layers_to_freeze_start = 1
-no_of_layers_to_freeze_end = 10
+no_of_layers_to_freeze_end = 9
 
 #if the transfer learning mode is first
 #freeze all the conv layers
@@ -73,7 +73,7 @@ image_depth = 3 if grayscale is False else 1
 picture_input_dimension = 224
 
 #training iteration
-epoch = 70
+epoch = 2000
 
 #this is to break the datasets in 'n' sizes 
 memory_limit = 1
@@ -83,7 +83,7 @@ batch_size = 30
 accuracy_batch_size = 30
 
 #learning rate of the model
-learning_rate = 0.000001
+learning_rate = 1e-7
 
 #names of the folder to save and load models
 save_folder_name = 'transferred_ckpt'

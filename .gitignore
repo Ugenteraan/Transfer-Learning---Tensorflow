@@ -4,3 +4,6 @@
 **/datasets/*
 **/ckpt_folder/*
 **/saved_ckpt/*
+**/transferred_ckpt/*
+**/validation_set/*
+**/accuracy_record.txt
