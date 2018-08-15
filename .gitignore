@@ -2,8 +2,10 @@
 **/*.ckpt
 **/*.jpg
 **/datasets/*
+**/datasets2/*
 **/ckpt_folder/*
 **/saved_ckpt/*
 **/transferred_ckpt/*
 **/validation_set/*
+**/validation_set2/*
 **/accuracy_record.txt
