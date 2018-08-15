@@ -18,7 +18,8 @@ class Model:
 		patch_depth1, patch_depth2, patch_depth3, patch_depth4 = 64, 128, 256, 512
 		num_of_hidden_layer1, num_of_hidden_layer2 = 4096, 1024
 
-
+		#trainable paramater controls if the weight should be freezed or not
+		#if trainable is set to True, then the weight is NOT FREEZED (means it is trainable)
 		w1 = tf.get_variable('w1', shape=[filter_size1, filter_size1, image_depth, patch_depth1], trainable=conv_trainable[0], initializer=tf.truncated_normal_initializer(stddev = 0.1))
 		b1 = tf.get_variable('b1', shape=[patch_depth1], trainable=conv_trainable[0], initializer=tf.truncated_normal_initializer(stddev = 0.3))
 		w2 = tf.get_variable('w2', shape=[filter_size1, filter_size1, patch_depth1, patch_depth1], trainable=conv_trainable[1], initializer=tf.truncated_normal_initializer(stddev = 0.1))

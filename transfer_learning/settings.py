@@ -10,7 +10,7 @@ number_of_files = 0
 current_directory = os.getcwd()
 
 #path where the datasets are stored
-dataset_path = current_directory + '/validation_set/'
+dataset_path = current_directory + '/validation_set2/'
 
 
 #transfer learning mode
