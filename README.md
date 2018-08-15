@@ -22,4 +22,4 @@
 2.4) Notice that there are three types of transfer learning. First choice only replaces the FC layers. Second choice replaces FC layers along with the defined number of Convolution layers from the back. Lastly, the third choice replaces none of the layer ( it loads the weights as a checkpoint and continue the training provided the dataset classes are the same!)   
 3) Validation.  
 3.1) Validation can be performed using the _validation.py_ files in both the folders. Make sure the `dataset_path` variable in _settings.py_ has been changed to the validation dataset folder.  
-3.2) If you're performing validation on the model that has undergone the transfer learning process, make sure to change the `load_folder_name` to `transferred-ckpt`.
+3.2) If you're performing validation on the model that has undergone the transfer learning process, make sure to change the `load_folder_name` to `transferred-ckpt` in _settings.py_.
