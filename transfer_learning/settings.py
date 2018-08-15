@@ -83,7 +83,7 @@ batch_size = 30
 accuracy_batch_size = 30
 
 #learning rate of the model
-learning_rate = 1e-7
+learning_rate = 1e-5
 
 #names of the folder to save and load models
 save_folder_name = 'transferred_ckpt'
