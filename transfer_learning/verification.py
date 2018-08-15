@@ -16,7 +16,7 @@ g1 = tf.Graph()
 #import meta file for graph 1
 with g1.as_default():
 
-	saver_g1 = tf.train.import_meta_graph(os.getcwd() + '/datasets/model.ckpt.meta')
+	saver_g1 = tf.train.import_meta_graph(os.getcwd() + '/transferred_ckpt/model.ckpt.meta')
 
 
 
@@ -25,7 +25,7 @@ sess1 = tf.Session(graph=g1)
 
 #load the checkpoint file for each session
 try:
-	saver_g1.restore(sess1, os.getcwd()+'/datasets/model.ckpt')
+	saver_g1.restore(sess1, os.getcwd()+'/transferred_ckpt/model.ckpt')
 	# saver_g1.restore(sess2, os.getcwd()+'/3-layer-vgg/ckpt_folder/model.ckpt')
 	print("Models have been loaded!")
 except:
